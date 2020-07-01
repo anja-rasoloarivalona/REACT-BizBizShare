@@ -1,0 +1,15 @@
+.errors {
+    position: fixed;
+    top: 10rem;
+    right: 10rem;
+}
+
+.error {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: .5rem;
+    color: #a30404;
+    border: 1px solid #a30404;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
