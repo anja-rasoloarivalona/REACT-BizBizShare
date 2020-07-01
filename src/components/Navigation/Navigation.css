@@ -10,6 +10,7 @@
         left: 0;
         background: var(--color-grey--dark2);
         width: 100%;
+        z-index: 1;
     }
 }
 
