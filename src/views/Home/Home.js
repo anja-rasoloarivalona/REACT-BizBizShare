@@ -20,7 +20,9 @@ import './Home.css'
                 />
                 <Button
                     type="submit"
-                    disabled={props.form.name === ''}
+                    disabled={props.form.name === ''} 
+                    // Here, instead of checking if the value is not empty, we could have directly checked if the value could pass the test, which means the length is at least 3
+                    // I did it deliberately so that it would be possible to make a mistake and see how the application reacts in that case
                 >
                     Submit
                 </Button>
