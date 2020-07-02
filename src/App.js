@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   validateInput = (value) => {
-    if(value.length > 2){
+    if(value.trim().length > 2){
       return true
     } else {
       return false
