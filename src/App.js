@@ -81,22 +81,23 @@ class App extends Component {
 
   
   render() {
+    const { form, namesList, animalsList, errors } = this.state
     return (
       <div className="container">
         <div className="app">
           <Navigation />
-          {this.state.errors && <Errors errors={this.state.errors} onClick={this.removeErrorHandler}/>}
+          {errors && <Errors errors={errors} onClick={this.removeErrorHandler}/>}
           <div className="app__view">
             <Switch>
               <Route exact path="/" render={() => 
                     <Home
-                        form={this.state.form}
+                        form={form}
                         onChange={this.onChangeInputHandler}
                         onSubmit={this.submitInputHandler}
                     />
                }/>
-              <Route path="/names" render={() => <Names namesList={this.state.namesList}/>}/>
-              <Route path="/animals" render={ () => <Animals animalsList={this.state.animalsList}/>}/>
+              <Route path="/names" render={() => <Names namesList={namesList}/>}/>
+              <Route path="/animals" render={ () => <Animals animalsList={animalsList}/>}/>
             </Switch>
           </div>
         </div>
